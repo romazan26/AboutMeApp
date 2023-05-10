@@ -43,6 +43,11 @@ final class LoginViewController: UIViewController {
         showAlert(withTitel: "Ooops", andShowMessage: "Your passwrod is \(curPassword)")
     }
     
+    @IBAction func unwind(for seque: UIStoryboardSegue) {
+        guard let welcomVC = seque.source as? WelcomeViewController else { return }
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
 
 }
 
