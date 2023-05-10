@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Llm-B6-SBW">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -30,12 +30,16 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-Kw-YF9">
                                                 <rect key="frame" x="0.0" y="70" width="353" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxo-Gg-xgH">
                                                 <rect key="frame" x="0.0" y="140" width="353" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
+                                                <connections>
+                                                    <action selector="loginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ne-uG-KGX"/>
+                                                    <segue destination="wlx-O1-bDh" kind="presentation" modalPresentationStyle="fullScreen" id="j51-3B-2Vu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -46,11 +50,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Fogot User Name?"/>
+                                                <connections>
+                                                    <action selector="fogotNameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="kev-zn-JfS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukh-2O-azi">
                                                 <rect key="frame" x="197.33333333333337" y="0.0" width="155.66666666666663" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Fogot password?"/>
+                                                <connections>
+                                                    <action selector="fogotPassowrdButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="OLM-aB-FCW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -69,10 +79,71 @@
                             <constraint firstItem="DY0-is-RI2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tQ2-ze-ljc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SET-8O-NAC"/>
+                    <connections>
+                        <outlet property="passwordTF" destination="DFT-Kw-YF9" id="0fH-jE-ON2"/>
+                        <outlet property="userNameTF" destination="LIc-kA-N8u" id="Het-rx-WMl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="-2"/>
+            <point key="canvasLocation" x="983.96946564885491" y="-2.1126760563380285"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="2lr-aN-tI3">
+            <objects>
+                <viewController id="wlx-O1-bDh" customClass="WelcomeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iXd-vc-EvQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcom, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPd-ve-2ba">
+                                <rect key="frame" x="30" y="130" width="333" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZz-Oj-Dz7">
+                                <rect key="frame" x="155.66666666666666" y="409" width="81.666666666666657" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1If-D3-7Mg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1If-D3-7Mg" firstAttribute="trailing" secondItem="jPd-ve-2ba" secondAttribute="trailing" constant="30" id="550-Pn-wLq"/>
+                            <constraint firstItem="jPd-ve-2ba" firstAttribute="top" secondItem="1If-D3-7Mg" secondAttribute="top" constant="130" id="EQv-1p-NyS"/>
+                            <constraint firstItem="yZz-Oj-Dz7" firstAttribute="centerY" secondItem="iXd-vc-EvQ" secondAttribute="centerY" id="OkX-nZ-Bqm"/>
+                            <constraint firstItem="yZz-Oj-Dz7" firstAttribute="centerX" secondItem="iXd-vc-EvQ" secondAttribute="centerX" id="fFX-Zm-ecY"/>
+                            <constraint firstItem="jPd-ve-2ba" firstAttribute="leading" secondItem="1If-D3-7Mg" secondAttribute="leading" constant="30" id="jlG-Xu-qkD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="welcomLabel" destination="jPd-ve-2ba" id="MGg-XD-4yA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3E-bT-2Kc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742.7480916030534" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SNv-vY-5g4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Llm-B6-SBW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N7f-eq-5V2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qax-hW-Lsj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WiJ-oV-oEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
