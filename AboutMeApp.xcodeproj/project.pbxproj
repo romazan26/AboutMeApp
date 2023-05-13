@@ -15,6 +15,8 @@
 		306695C82A0BEBDA0063C8BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306695C62A0BEBDA0063C8BC /* LaunchScreen.storyboard */; };
 		306695D02A0BF0600063C8BC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306695CF2A0BF0600063C8BC /* WelcomeViewController.swift */; };
 		30A996392A0FAFBA008D37DA /* InfoUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A996382A0FAFBA008D37DA /* InfoUsers.swift */; };
+		30A9963B2A0FD742008D37DA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9963A2A0FD742008D37DA /* UserViewController.swift */; };
+		30A9963D2A0FEE99008D37DA /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9963C2A0FEE99008D37DA /* MoreInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		306695C92A0BEBDA0063C8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306695CF2A0BF0600063C8BC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		30A996382A0FAFBA008D37DA /* InfoUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoUsers.swift; sourceTree = "<group>"; };
+		30A9963A2A0FD742008D37DA /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		30A9963C2A0FEE99008D37DA /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 			children = (
 				306695BF2A0BEBD80063C8BC /* LoginViewController.swift */,
 				306695CF2A0BF0600063C8BC /* WelcomeViewController.swift */,
+				30A9963A2A0FD742008D37DA /* UserViewController.swift */,
+				30A9963C2A0FEE99008D37DA /* MoreInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -185,7 +191,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				306695C02A0BEBD80063C8BC /* LoginViewController.swift in Sources */,
+				30A9963B2A0FD742008D37DA /* UserViewController.swift in Sources */,
 				306695D02A0BF0600063C8BC /* WelcomeViewController.swift in Sources */,
+				30A9963D2A0FEE99008D37DA /* MoreInfoViewController.swift in Sources */,
 				306695BC2A0BEBD80063C8BC /* AppDelegate.swift in Sources */,
 				306695BE2A0BEBD80063C8BC /* SceneDelegate.swift in Sources */,
 				30A996392A0FAFBA008D37DA /* InfoUsers.swift in Sources */,

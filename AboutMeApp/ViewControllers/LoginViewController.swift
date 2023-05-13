@@ -11,12 +11,20 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var userNameTF: UITextField!
     
-   private let curName = "user"
-   private let curPassword = "password"
+    private let user = User.getUser()
+    private var curName = ""
+    private var curPassword = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        GetUser()
+    }
+   
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-            welcomeVC.userName = curName
+        welcomeVC.userName = curName
+       
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -34,6 +42,8 @@ final class LoginViewController: UIViewController {
             return
         }
         performSegue(withIdentifier: "openWelcomeVC", sender: nil)
+        print("передача \(curName)")
+        
     }
     
     @IBAction func FogotButton(_ sender: UIButton) {
@@ -45,6 +55,11 @@ final class LoginViewController: UIViewController {
     @IBAction func unwind(for seque: UIStoryboardSegue) {
         userNameTF.text = ""
         passwordTF.text = ""
+    }
+    private func GetUser(){
+        curName = String(user.userName)
+        curPassword = String(user.userPassword)
+        
     }
 
 }

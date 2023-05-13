@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomLabel: UILabel!
     var userName = ""
@@ -16,8 +16,6 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         welcomLabel.text = "Welcom, \(userName)"
         Gradient()
-
-        
     }
     
 

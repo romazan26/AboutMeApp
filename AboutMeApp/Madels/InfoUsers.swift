@@ -10,8 +10,8 @@ struct User {
     let userPassword: String
     let userInfo: [UserInfo]
     
-    static func getUser() -> [User]{
-        [
+    static func getUser() -> (User){
+        
             User(
                 userName: "user",
                 userPassword: "pasword",
@@ -23,7 +23,7 @@ struct User {
                     biography: "date of birhtday 29.04.1990")
                           ]
             )
-        ]
+        
     }
 }
 
