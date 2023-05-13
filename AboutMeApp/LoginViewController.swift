@@ -11,51 +11,50 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     @IBOutlet var userNameTF: UITextField!
     
-    let curName = "user"
-    let curPassword = "password"
-    var open = false
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+   private let curName = "user"
+   private let curPassword = "password"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if open {
             guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-            welcomeVC.userName = "Welcom, \(userNameTF.text ?? "")"
-        } else { return }
+            welcomeVC.userName = curName
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     @IBAction func loginButton() {
-        if userNameTF.text == curName && passwordTF.text == curPassword {
-            open = true
-        } else {
-            open = false
-            showAlert(withTitel: "ERROR", andShowMessage: "Enter the correct username and password")
+        guard userNameTF.text == curName && passwordTF.text == curPassword else {
+            showAlert(
+                withTitel: "Invalid login or password",
+                andShowMessage: "Please, enter correct login and password",
+                textField: passwordTF
+            )
+            return
         }
+        performSegue(withIdentifier: "openWelcomeVC", sender: nil)
     }
     
-    @IBAction func fogotNameButton() {
-        showAlert(withTitel: "Ooops", andShowMessage: "Your name is \(curName)")
-    }
-    @IBAction func fogotPassowrdButton() {
-        showAlert(withTitel: "Ooops", andShowMessage: "Your passwrod is \(curPassword)")
+    @IBAction func FogotButton(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(withTitel: "Oops!", andShowMessage: "Your name is \(curName) 😉")
+        : showAlert(withTitel: "Oops!", andShowMessage: "Your password is \(curPassword) 😉")
     }
     
     @IBAction func unwind(for seque: UIStoryboardSegue) {
-        guard let welcomVC = seque.source as? WelcomeViewController else { return }
         userNameTF.text = ""
         passwordTF.text = ""
     }
 
 }
 
+
 extension LoginViewController {
-    private func showAlert(withTitel title: String, andShowMessage message: String) {
+    private func showAlert(withTitel title: String, andShowMessage message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.passwordTF.text = ""
+            textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)
