@@ -10,12 +10,13 @@ import UIKit
 final class WelcomeViewController: UIViewController {
 
     @IBOutlet var welcomLabel: UILabel!
-    var userName = ""
+    var userName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomLabel.text = "Welcom, \(userName)"
+        welcomLabel.text = "Welcom, \(userName ?? "")"
         Gradient()
+        print("передалось: \(userName ?? "")")
     }
     
 
@@ -32,3 +33,4 @@ final class WelcomeViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
+

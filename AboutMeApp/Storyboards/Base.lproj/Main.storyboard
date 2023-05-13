@@ -137,21 +137,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OM5-wh-kT4">
-                                <rect key="frame" x="16" y="74" width="396" height="264"/>
+                                <rect key="frame" x="16" y="74" width="396" height="110.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLc-MA-KzJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="100.66666666666667" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100.66666666666667" height="51.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="43"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C1a-7S-12y">
-                                        <rect key="frame" x="0.0" y="136" width="288" height="128"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.smiling" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C1a-7S-12y">
+                                        <rect key="frame" x="0.0" y="60.333333333333343" width="19.666666666666668" height="50.000000000000014"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oYi-GL-ahq">
-                                <rect key="frame" x="16" y="413" width="396" height="105.33333333333337"/>
+                                <rect key="frame" x="16" y="259.66666666666669" width="396" height="105.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fre-GW-jpd">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="105.33333333333333"/>
@@ -169,7 +169,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compny:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yym-nQ-GV5">
-                                                <rect key="frame" x="0.0" y="56.666666666666693" width="150" height="20.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="56.666666666666636" width="150" height="20.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -201,7 +201,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzF-uE-1SO">
-                                                <rect key="frame" x="0.0" y="56.666666666666693" width="236" height="20.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="56.666666666666636" width="236" height="20.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -239,6 +239,7 @@
                         <outlet property="NameLabel" destination="SQJ-EI-FC8" id="hzJ-si-4I2"/>
                         <outlet property="companyLabel" destination="yzF-uE-1SO" id="YZp-H6-qzm"/>
                         <outlet property="postCompanyLabel" destination="pwE-fP-Cqa" id="VxH-Os-iIR"/>
+                        <outlet property="startNameLabel" destination="XLc-MA-KzJ" id="cAf-0P-dB8"/>
                         <outlet property="surNameLabel" destination="isF-ZW-EhA" id="KtP-UM-efF"/>
                     </connections>
                 </viewController>
@@ -319,6 +320,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="face.smiling" catalog="system" width="128" height="123"/>
         <image name="figure.pickleball" catalog="system" width="120" height="128"/>
         <image name="rectangle.inset.filled.and.person.filled" catalog="system" width="128" height="87"/>
         <systemColor name="systemBackgroundColor">

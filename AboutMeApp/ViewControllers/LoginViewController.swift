@@ -23,7 +23,8 @@ final class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = curName
+            welcomeVC.userName = curName
+            print("передача \(curName)")
        
     }
     
@@ -42,7 +43,7 @@ final class LoginViewController: UIViewController {
             return
         }
         performSegue(withIdentifier: "openWelcomeVC", sender: nil)
-        print("передача \(curName)")
+        
         
     }
     

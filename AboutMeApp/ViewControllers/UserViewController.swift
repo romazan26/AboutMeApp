@@ -11,6 +11,7 @@ final class UserViewController: UIViewController {
     
     private let user = User.getUser()
     
+    @IBOutlet var startNameLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surNameLabel: UILabel!
     @IBOutlet var companyLabel: UILabel!
@@ -43,6 +44,7 @@ final class UserViewController: UIViewController {
             surNameLabel.text = information.surname
             companyLabel.text = information.company
             postCompanyLabel.text = information.post
+            startNameLabel.text = "\(information.name), \(information.surname)"
         }
     }
 }
