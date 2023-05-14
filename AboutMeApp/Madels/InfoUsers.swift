@@ -14,7 +14,7 @@ struct User {
         
             User(
                 userName: "user",
-                userPassword: "pasword",
+                userPassword: "password",
                 userInfo: [UserInfo(
                     name: "Roman",
                     surname: "Glavackii",
